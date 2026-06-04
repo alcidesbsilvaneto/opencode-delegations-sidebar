@@ -1,0 +1,57 @@
+{
+  "name": "opencode-delegations-sidebar",
+  "version": "0.1.0",
+  "description": "opencode TUI plugin that shows sub-agent delegations (subtasks) in the session sidebar.",
+  "type": "module",
+  "main": "./dist/server.js",
+  "exports": {
+    ".": "./dist/tui.js",
+    "./tui": "./dist/tui.js",
+    "./server": "./dist/server.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "bun run scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "plugin",
+    "tui",
+    "subagent",
+    "delegation",
+    "sidebar"
+  ],
+  "oc-plugin": [
+    "tui"
+  ],
+  "author": "Alcides Bezerra <alcides.bsilvaneto@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alcidesbsilvaneto/opencode-delegations-sidebar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alcidesbsilvaneto/opencode-delegations-sidebar/issues"
+  },
+  "homepage": "https://github.com/alcidesbsilvaneto/opencode-delegations-sidebar#readme",
+  "peerDependencies": {
+    "@opencode-ai/plugin": ">=1.4.0",
+    "@opentui/solid": ">=0.1.0",
+    "solid-js": ">=1.8.0"
+  },
+  "devDependencies": {
+    "@opentui/solid": ">=0.1.0",
+    "@types/bun": "latest",
+    "solid-js": ">=1.8.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "bun": ">=1.1.0"
+  }
+}
